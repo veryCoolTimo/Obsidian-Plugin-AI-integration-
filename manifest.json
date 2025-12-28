@@ -1,0 +1,11 @@
+{
+	"id": "claude-assistant",
+	"name": "Claude Assistant",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "AI assistant powered by Claude with smart context search across your vault",
+	"author": "Timo",
+	"authorUrl": "https://github.com/veryCoolTimo",
+	"fundingUrl": "",
+	"isDesktopOnly": false
+}
