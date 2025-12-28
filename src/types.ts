@@ -18,7 +18,7 @@ You have access to the user's notes for context.
 Answer questions based on the provided context when relevant.
 Be concise and helpful. Use markdown formatting.`,
 	maxContextNotes: 5,
-	searchThreshold: 0.3,
+	searchThreshold: 0.1,
 };
 
 export interface ChatMessage {
