@@ -3,7 +3,7 @@ import { ChatMessage, ClaudeAssistantSettings } from "./types";
 import { sendMessage } from "./api";
 import { SmartSearch } from "./search";
 
-export const CHAT_VIEW_TYPE = "claude-assistant-chat";
+export const CHAT_VIEW_TYPE = "timo-assistant-chat";
 
 export class ChatView extends ItemView {
 	private messages: ChatMessage[] = [];
@@ -28,7 +28,7 @@ export class ChatView extends ItemView {
 	}
 
 	getDisplayText(): string {
-		return "Claude Assistant";
+		return "Timo Assistant";
 	}
 
 	getIcon(): string {
@@ -46,7 +46,7 @@ export class ChatView extends ItemView {
 
 		// Header
 		const header = container.createEl("div", { cls: "claude-header" });
-		header.createEl("h4", { text: "Claude Assistant" });
+		header.createEl("h4", { text: "Timo Assistant" });
 
 		const clearBtn = header.createEl("button", { text: "Clear", cls: "claude-clear-btn" });
 		clearBtn.onclick = () => this.clearChat();
@@ -81,7 +81,7 @@ export class ChatView extends ItemView {
 	private addWelcomeMessage() {
 		const welcome = this.messagesContainer.createEl("div", { cls: "claude-message claude-welcome" });
 		welcome.innerHTML = `
-			<p><strong>Claude Assistant</strong></p>
+			<p><strong>Timo Assistant</strong></p>
 			<p>Ask me anything! I'll search your notes for context.</p>
 			<ul>
 				<li>Ask questions about your notes</li>

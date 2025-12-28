@@ -13,7 +13,7 @@ export class ClaudeAssistantSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		containerEl.createEl("h2", { text: "Claude Assistant Settings" });
+		containerEl.createEl("h2", { text: "Timo Assistant Settings" });
 
 		// API Key
 		new Setting(containerEl)

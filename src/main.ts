@@ -21,7 +21,7 @@ export default class ClaudeAssistantPlugin extends Plugin {
 		);
 
 		// Ribbon icon to open chat
-		this.addRibbonIcon("message-circle", "Claude Assistant", () => {
+		this.addRibbonIcon("message-circle", "Timo Assistant", () => {
 			this.activateChatView();
 		});
 

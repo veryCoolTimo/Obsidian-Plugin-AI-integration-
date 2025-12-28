@@ -1,6 +1,6 @@
 {
-	"id": "claude-assistant",
-	"name": "Claude Assistant",
+	"id": "timo-assistant",
+	"name": "Timo Assistant",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
 	"description": "AI assistant powered by Claude with smart context search across your vault",
