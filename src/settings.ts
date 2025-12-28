@@ -30,16 +30,37 @@ export class ClaudeAssistantSettingTab extends PluginSettingTab {
 		// Model selection
 		new Setting(containerEl)
 			.setName("Model")
-			.setDesc("Claude model to use")
+			.setDesc("Select a model or enter custom below")
 			.addDropdown(dropdown => dropdown
 				.addOption("anthropic/claude-sonnet-4", "Claude Sonnet 4")
 				.addOption("anthropic/claude-opus-4", "Claude Opus 4")
-				.addOption("anthropic/claude-haiku", "Claude Haiku")
 				.addOption("anthropic/claude-3.5-sonnet", "Claude 3.5 Sonnet")
-				.setValue(this.plugin.settings.model)
+				.addOption("anthropic/claude-3.5-haiku", "Claude 3.5 Haiku")
+				.addOption("openai/gpt-4o", "GPT-4o")
+				.addOption("google/gemini-2.0-flash-exp:free", "Gemini 2.0 Flash (free)")
+				.addOption("custom", "Custom (enter below)")
+				.setValue(this.plugin.settings.model.startsWith("custom:") ? "custom" : this.plugin.settings.model)
 				.onChange(async (value) => {
-					this.plugin.settings.model = value;
-					await this.plugin.saveSettings();
+					if (value !== "custom") {
+						this.plugin.settings.model = value;
+						await this.plugin.saveSettings();
+					}
+				}));
+
+		// Custom model input
+		new Setting(containerEl)
+			.setName("Custom Model")
+			.setDesc("OpenRouter model ID (e.g. anthropic/claude-3-opus)")
+			.addText(text => text
+				.setPlaceholder("provider/model-name")
+				.setValue(this.plugin.settings.model.startsWith("custom:")
+					? this.plugin.settings.model.replace("custom:", "")
+					: "")
+				.onChange(async (value) => {
+					if (value) {
+						this.plugin.settings.model = value;
+						await this.plugin.saveSettings();
+					}
 				}));
 
 		// Max tokens
