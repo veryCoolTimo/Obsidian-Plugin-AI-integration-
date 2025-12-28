@@ -1,6 +1,6 @@
 # Timo Assistant for Obsidian
 
-Personal AI assistant powered by Claude with smart context search across your vault.
+Personal AI assistant powered by OpenRouter with smart context search across your vault.
 
 ## Features
 

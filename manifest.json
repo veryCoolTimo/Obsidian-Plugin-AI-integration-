@@ -3,7 +3,7 @@
 	"name": "Timo Assistant",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
-	"description": "AI assistant powered by Claude with smart context search across your vault",
+	"description": "AI assistant powered by OpenRouter with smart context search across your vault",
 	"author": "Timo",
 	"authorUrl": "https://github.com/veryCoolTimo",
 	"fundingUrl": "",
